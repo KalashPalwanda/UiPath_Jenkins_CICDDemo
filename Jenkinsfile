@@ -1,3 +1,8 @@
+
+pipeline
+{
+	stages
+	{
 stage('checkout')
 {
   steps
@@ -14,6 +19,7 @@ stage('Deploy to UAT') {
 	               UiPathTest credentials: Token(accountName: 'testiqngktgo', credentialsId: 'APIUserKey'), folderName: 'Shared', orchestratorAddress: 'https://cloud.uipath.com/testiqngktgo/DefaultTenant/orchestrator_', orchestratorTenant: 'DefaultTenant', testResultsOutputPath: '', testTarget: TestProject(environments: '', testProjectPath: 'project.json')
 	
 
-	        )
+		    }
 	            }
 	        }
+}
